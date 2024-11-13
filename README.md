@@ -30,14 +30,14 @@ Once the project is built, you can run the application using:
 ```bash
 mvn spring-boot:run
 ```
-By default, the application will run on `http://localhost:8080`.
+By default, the application will run on `http://localhost:9098`.
 
 ## 3. Sample API Requests
 Here are the sample API requests to test each endpoint:
 
 ### 1. **Create a new customer** (POST request)
 ```bash
-POST http://localhost:8080/customer
+POST http://localhost:9098/customer
 ```
 **Request Body**:
 ```json
@@ -50,22 +50,22 @@ POST http://localhost:8080/customer
 
 ### 2. **Get a customer by ID** (GET request)
 ```bash
-GET http://localhost:8080/customer/{id}
+GET http://localhost:9098/customer/{id}
 ```
 Replace `{id}` with the actual UUID of the customer.
 
 ### 3. **Get customers by name or email** (GET request)
 ```bash
-GET http://localhost:8080/customers?name=John
+GET http://localhost:9098/customers?name=John
 ```
 or
 ```bash
-GET http://localhost:8080/customers?email=john.doe@example.com
+GET http://localhost:9098/customers?email=john.doe@example.com
 ```
 
 ### 4. **Update a customer** (PUT request)
 ```bash
-PUT http://localhost:8080/customer/{id}
+PUT http://localhost:9098/customer/{id}
 ```
 **Request Body**:
 ```json
@@ -78,19 +78,19 @@ PUT http://localhost:8080/customer/{id}
 
 ### 5. **Delete a customer** (DELETE request)
 ```bash
-DELETE http://localhost:8080/customer/{id}
+DELETE http://localhost:9098/customer/{id}
 ```
 
 ### 6. **Get all customers** (GET request)
 ```bash
-GET http://localhost:8080/customer/all
+GET http://localhost:9098/customer/all
 ```
 
 ## 4. Accessing the H2 Database Console
 To access the H2 database console:
 1. Open your browser and navigate to:
    ```bash
-   http://localhost:8080/h2-console
+   http://localhost:9098/h2-console
    ```
 2. In the login page:
    - **JDBC URL**: `jdbc:h2:mem:testdb`
@@ -107,7 +107,7 @@ To access the H2 database console:
 To access the OpenAPI documentation via Swagger UI:
 1. Open your browser and go to:
    ```bash
-   http://localhost:8080/swagger-ui.html
+   http://localhost:9098/swagger-ui.html
    ```
 2. This page will list all the available API endpoints and allow you to test them directly from the UI.
 
